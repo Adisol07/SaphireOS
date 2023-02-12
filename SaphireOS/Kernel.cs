@@ -7,6 +7,7 @@ using Sys = Cosmos.System;
 using Drawing = System.Drawing;
 using SaphireOS.HighLevel;
 using SaphireOS.SDK.Graphics;
+using System.Threading;
 
 namespace SaphireOS
 {
@@ -41,18 +42,24 @@ namespace SaphireOS
 			Layer loadingLayer = new Layer();
 			loadingLayer.Level = 0;
 			loadingLayer.IsVisible = true;
-
 			Graphics loadingGraphics = new Graphics(loadingLayer);
-			loadingGraphics.Fill(Color.Green);
+			loadingGraphics.Fill(Color.White);
 
+			Layer testLayer = new Layer();
+			testLayer.Level = 1;
+			testLayer.IsVisible = true;
+			Graphics testGraphics = new Graphics(testLayer);
+			testGraphics.FillRectangle(new SDK.Mathematics.Vector2(10, 10), new SDK.Mathematics.Rectangle(100, 100), Color.Green);
+			testGraphics.DrawRectangle(new SDK.Mathematics.Vector2(10, 10), new SDK.Mathematics.Rectangle(100, 100), Color.Blue);
+
+			LayerManager.Layers.Add(testLayer);
 			LayerManager.Layers.Add(loadingLayer);
 		}
 
 		//Main loop
 		protected override void Run()
 		{
-			GraphicsDriver.Clear(Drawing.Color.Black);
-			LayerManager.RenderAll();
+			LayerManager.HandleLayers();
 			KeyboardDriver.HandleKeyboard();
 			MouseDriver.HandleMouse();
 			Cosmos.Core.Memory.Heap.Collect();

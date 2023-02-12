@@ -31,6 +31,14 @@ namespace SaphireOS.System.Drivers
         {
             Screen.DrawPoint(new Pen(color), new Cosmos.System.Graphics.Point(x, y));
         }
+        public static void DrawRectangle(int x, int y, int width, int height, Color color)
+        {
+            Screen.DrawRectangle(new Pen(color), new Cosmos.System.Graphics.Point(x, y), width, height);
+        }
+        public static void FillRectangle(int x, int y, int width, int height, Color color)
+        {
+            Screen.DrawFilledRectangle(new Pen(color), new Cosmos.System.Graphics.Point(x, y), width, height);
+        }
         public static void Clear(Color color)
         {
             Screen.Clear(color);

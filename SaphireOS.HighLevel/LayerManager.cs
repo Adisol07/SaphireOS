@@ -1,4 +1,5 @@
 ﻿using SaphireOS.SDK.Graphics;
+using SaphireOS.System.Drivers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,30 +12,45 @@ namespace SaphireOS.HighLevel
     {
         public static List<Layer> Layers { get; set; } = new List<Layer>();
 
-        public static void RenderAll()
+        public static void HandleLayers()
         {
-            List<Layer> copyLayers = Layers;
-            List<int> layersToDelete = new List<int>();
+            foreach (var layer in Layers)
+            {
+                if (layer.NeedUpdate)
+                {
+                    RenderAll(Sort());
+                    break;
+                }
+            }
+        }
+
+        public static List<Layer> Sort()
+        {
+            List<Layer> result = new List<Layer>();
+
             int currentLevel = 0;
-            int index = 0;
         again:
-            if (copyLayers.Count == 0)
-                goto end;
-            foreach (Layer layer in copyLayers)
+            if (result.Count == Layers.Count)
+                return result;
+            foreach (Layer layer in Layers)
             {
                 if (layer.Level == currentLevel)
                 {
-                    layer.Render();
-                    layersToDelete.Add(index);
+					result.Add(layer);
                 }
-                index++;
             }
             currentLevel++;
-            index = 0;
-            foreach (int itd in layersToDelete)
-                copyLayers.RemoveAt(itd);
             goto again;
-        end:;
+        }
+        public static void RenderAll(List<Layer> layers)
+        {
+            int index = 0;
+            foreach (Layer layer in layers)
+            {
+				layer.Render();
+                layer.NeedUpdate = false;
+				index++;
+            }
         }
     }
 }

@@ -11,9 +11,10 @@ namespace SaphireOS.SDK.Graphics
 {
     public class Layer
     {
-        public List<Tuple<Vector2, Color>> Instructions { get; set; } = new List<Tuple<Vector2, Color>>();
+        public List<GraphicsInstruction> Instructions { get; set; } = new List<GraphicsInstruction>();
         public bool IsVisible { get; set; } = false;
         public int Level { get; set; } = 0;
+        public bool NeedUpdate { get; set; } = false;
 
         public void Render()
         {
@@ -21,7 +22,7 @@ namespace SaphireOS.SDK.Graphics
                 return;
             foreach (var i in Instructions)
             {
-                GraphicsDriver.DrawPoint(i.Item1.X, i.Item1.Y, Drawing.Color.FromArgb(i.Item2.A, i.Item2.R, i.Item2.G, i.Item2.B));
+                i.Render();
             }
             GraphicsDriver.SwapBuffers();
         }
