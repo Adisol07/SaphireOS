@@ -11,31 +11,36 @@ namespace SaphireOS.SDK.Graphics
 {
     public class Image
     {
-        private Bitmap bitmap;
-        public Color[] Pixels { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
+        private Bitmap bitmap = null;
+        public Color[] Pixels { get; set; } = new Color[0];
+        public int Width { get; set; } = 0;
+        public int Height { get; set; } = 0;
 
         public Image()
         { }
         public Image(byte[] raw)
-        { bitmap = new Bitmap(raw); loadPixels(); }
+        { bitmap = new Bitmap(raw); load(); }
         public Image(string path)
-        { bitmap = new Bitmap(File.ReadAllBytes(path)); loadPixels(); }
+        { bitmap = new Bitmap(File.ReadAllBytes(path)); load(); }
 
         public int[] GetRaw()
         { return bitmap.rawData; }
 
+        private void load()
+        {
+            Width = (int)bitmap.Width;
+            Height = (int)bitmap.Height;
+            loadPixels();
+        }
         private void loadPixels()
         {
-            Pixels = new Color[bitmap.rawData.Length - 1];
-            int index = 0;
+            List<Color> bC = new List<Color>();
             foreach (int i in bitmap.rawData)
             {
                 dw.Color clr = dw.Color.FromArgb(i);
-                Pixels[index] = new Color(clr.A, clr.R, clr.G, clr.B);
-                index++;
+                bC.Add(new Color(clr.A, clr.R, clr.G, clr.B));
             }
-        }
+			Pixels = bC.ToArray();
+		}
     }
 }

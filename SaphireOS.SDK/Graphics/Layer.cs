@@ -11,9 +11,9 @@ namespace SaphireOS.SDK.Graphics
 {
     public class Layer
     {
-        public List<GraphicsInstruction> Instructions { get; set; } = new List<GraphicsInstruction>();
-        public bool IsVisible { get; set; } = false;
-        public int Level { get; set; } = 0;
+        public virtual List<GraphicsInstruction> Instructions { get; set; } = new List<GraphicsInstruction>();
+        public virtual bool IsVisible { get; set; } = false;
+        public virtual int Level { get; set; } = 0;
         public bool NeedUpdate { get; set; } = false;
 
         public void Render()

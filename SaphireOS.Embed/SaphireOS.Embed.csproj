@@ -7,6 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\error_sad_saphireos.bmp" />
+    <None Remove="Resources\icons8_black_http_error_code_32.bmp" />
+    <None Remove="Resources\icons8_http_error_code_32.bmp" />
+    <None Remove="Resources\rodeo-beach-marin-headlands-california-sunset-rocky-coast-1280x720-3824.bmp" />
+    <None Remove="Resources\start-computeraif-14572.wav" />
+    <None Remove="Resources\zap-light16.psf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\error_sad_saphireos.bmp" />
+    <EmbeddedResource Include="Resources\icons8_http_error_code_32.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\icons8_black_http_error_code_32.bmp" />
+    <EmbeddedResource Include="Resources\rodeo-beach-marin-headlands-california-sunset-rocky-coast-1280x720-3824.bmp" />
+    <EmbeddedResource Include="Resources\start-computeraif-14572.wav" />
+    <EmbeddedResource Include="Resources\zap-light16.psf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Cosmos.System2" Version="0.1.0-localbuild20221121060004" />
   </ItemGroup>
 

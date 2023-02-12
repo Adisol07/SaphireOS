@@ -1,4 +1,5 @@
 ﻿using Cosmos.System.Graphics;
+using Cosmos.System.Graphics.Fonts;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -38,6 +39,14 @@ namespace SaphireOS.System.Drivers
         public static void FillRectangle(int x, int y, int width, int height, Color color)
         {
             Screen.DrawFilledRectangle(new Pen(color), new Cosmos.System.Graphics.Point(x, y), width, height);
+        }
+        public static void DrawLine(int x1, int y1, int x2, int y2, Color color)
+        {
+            Screen.DrawLine(new Pen(color), new Cosmos.System.Graphics.Point(x1, y1), new Cosmos.System.Graphics.Point(x2, y2));
+        }
+        public static void DrawString(int x, int y, string str, Font font, Color color)
+        {
+            Screen.DrawString(str, font, new Pen(color), new Cosmos.System.Graphics.Point(x, y));
         }
         public static void Clear(Color color)
         {

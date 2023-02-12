@@ -13,17 +13,17 @@ namespace SaphireOS.System.Drivers
     {
         public static void Play(byte[] bytes)
         {
-            var mixer = new AudioMixer();
-            var audioStream = MemoryAudioStream.FromWave(bytes);
-            var driver = AC97.Initialize((ushort)bytes.Length);
-            mixer.Streams.Add(audioStream);
+			var mixer = new AudioMixer();
+			var audioStream = MemoryAudioStream.FromWave(bytes);
+			var driver = AC97.Initialize(4096);
+			mixer.Streams.Add(audioStream);
 
-            var audioManager = new AudioManager()
-            {
-                Stream = mixer,
-                Output = driver,
-            };
-            audioManager.Enable();
-        }
+			var audioManager = new AudioManager()
+			{
+				Stream = mixer,
+				Output = driver
+			};
+			audioManager.Enable();
+		}
     }
 }

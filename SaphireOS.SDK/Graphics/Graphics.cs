@@ -1,4 +1,6 @@
-﻿using SaphireOS.SDK.Mathematics;
+﻿using Cosmos.System.Graphics.Fonts;
+using SaphireOS.Embed;
+using SaphireOS.SDK.Mathematics;
 using SaphireOS.System.Drivers;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SaphireOS.SDK.Graphics
 {
@@ -36,6 +39,21 @@ namespace SaphireOS.SDK.Graphics
         public void FillRectangle(Vector2 pos, Mathematics.Rectangle rectangle, Color color)
         {
 			Layer.Instructions.Add(new FilledRectangleGraphicsInstruction(pos, rectangle, color));
+			Layer.NeedUpdate = true;
+		}
+        public void DrawLine(Vector2 startPos, Vector2 endPos, Color color)
+        {
+            Layer.Instructions.Add(new LineGraphicsInstruction(startPos, endPos, color));
+            Layer.NeedUpdate = true;
+        }
+        public void DrawText(Vector2 pos, string text, Color foreColor, Font font)
+        {
+			Layer.Instructions.Add(new TextGraphicsInstruction(pos, text, font, foreColor));
+			Layer.NeedUpdate = true;
+		}
+		public void DrawImage(Vector2 pos, Image image)
+        {
+			Layer.Instructions.Add(new ImageGraphicsInstruction(pos, image));
 			Layer.NeedUpdate = true;
 		}
     }
