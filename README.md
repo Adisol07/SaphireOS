@@ -5,7 +5,7 @@
 ![Screenshot from VMware](https://github.com/Adisol07/SaphireOS/blob/master/saphireos_screenshot1.png?raw=true)
 #### Used:
  - Systems
-	 - CosmosOS
+	 - [CosmosOS](https://www.gocosmos.org/) : [CosmosOS Github](https://github.com/CosmosOS/Cosmos)
 	 - C#
 	 - .NET 6.0
  - Assets
