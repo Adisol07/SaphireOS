@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33209.295
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaphireOS", "SaphireOS\SaphireOS.csproj", "{94FF6E85-0E8E-429D-A89B-AA5CC1AD5816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaphireOS.System", "SaphireOS.System\SaphireOS.System.csproj", "{88DC0097-C196-4EC6-9F65-55EC599B2816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaphireOS.Embed", "SaphireOS.Embed\SaphireOS.Embed.csproj", "{34506C60-78E5-4E73-B8F6-1F96D171B836}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaphireOS.HighLevel", "SaphireOS.HighLevel\SaphireOS.HighLevel.csproj", "{6686F095-27B7-4422-B668-D828B6D2DF08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaphireOS.SDK", "SaphireOS.SDK\SaphireOS.SDK.csproj", "{735AEDB5-9E89-4970-9E01-1F7E8F26074B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FF6E85-0E8E-429D-A89B-AA5CC1AD5816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FF6E85-0E8E-429D-A89B-AA5CC1AD5816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FF6E85-0E8E-429D-A89B-AA5CC1AD5816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FF6E85-0E8E-429D-A89B-AA5CC1AD5816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DC0097-C196-4EC6-9F65-55EC599B2816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DC0097-C196-4EC6-9F65-55EC599B2816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DC0097-C196-4EC6-9F65-55EC599B2816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DC0097-C196-4EC6-9F65-55EC599B2816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34506C60-78E5-4E73-B8F6-1F96D171B836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34506C60-78E5-4E73-B8F6-1F96D171B836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34506C60-78E5-4E73-B8F6-1F96D171B836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34506C60-78E5-4E73-B8F6-1F96D171B836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6686F095-27B7-4422-B668-D828B6D2DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6686F095-27B7-4422-B668-D828B6D2DF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6686F095-27B7-4422-B668-D828B6D2DF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6686F095-27B7-4422-B668-D828B6D2DF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735AEDB5-9E89-4970-9E01-1F7E8F26074B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735AEDB5-9E89-4970-9E01-1F7E8F26074B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735AEDB5-9E89-4970-9E01-1F7E8F26074B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735AEDB5-9E89-4970-9E01-1F7E8F26074B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADB47588-165F-47B3-82D2-6203F83FA00D}
+	EndGlobalSection
+EndGlobal
