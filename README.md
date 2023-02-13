@@ -3,6 +3,7 @@
 #### Fully made with CosmosOS!
 #### Version: *SaphireOS v1.0.0-dev*
 #### Planned features:
+ - UI Components
  - App support
  - Fully done desktop
  - Premade apps (File Explorer, Calculator, etc..)
