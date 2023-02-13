@@ -2,6 +2,10 @@
 ### New operating system
 #### Fully made with CosmosOS!
 #### Version: *SaphireOS v1.0.0-dev*
+#### Planned features:
+ - App support
+ - Fully done desktop
+ - Premade apps (File Explorer, Calculator, etc..)
 ![Screenshot from VMware](https://github.com/Adisol07/SaphireOS/blob/master/saphireos_screenshot1.png?raw=true)
 #### Used:
  - Systems
