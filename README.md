@@ -5,6 +5,7 @@
 #### Planned features:
  - Shell
  - Registry
+ - User system
  - UI Components
  - App support
  - Fully done desktop
