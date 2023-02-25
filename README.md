@@ -10,6 +10,7 @@
  - App support
  - Fully done desktop
  - Premade apps (File Explorer, Calculator, etc..)
+ - Network driver
  - Repair Audio driver
 ##
 ![Screenshot from VMware](https://github.com/Adisol07/SaphireOS/blob/master/saphireos_screenshot1.png?raw=true)
